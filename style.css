@@ -7,6 +7,7 @@ body {
   margin: 0 auto;
   max-width: 320px;
   font-family: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #171717;
   border: 1px solid #ccc;
 }
 .header {
@@ -32,10 +33,10 @@ body {
   margin: 2.4rem 0;
   padding-right: 1.6rem;
   padding-left: 1.6rem;
+  color: #111;
   font-family: 'Lora', serif;
   font-size: 1.4rem;
   font-weight: normal;
-  color: #111;
 }
 .gallery-list {
   padding: 0;
@@ -47,4 +48,60 @@ body {
 
 .gallery-item {
   cursor: pointer;
+}
+
+.product-details {
+  padding-left: 1.6rem;
+  padding-right: 1.6rem;
+}
+.product-details-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.product-price {
+  color: #111;
+  font-size: 1.8rem;
+}
+.product-id {
+  font: 1.2rem;
+}
+.color-section {
+  padding-top: 1.6rem;
+}
+.color-name {
+  margin: 0;
+  font-size: 1.2rem;
+}
+.color-list {
+  margin: 0;
+  padding-top: 1.6em;
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  display: flex;
+  list-style: none;
+}
+.color-item:not(:last-of-type) {
+  margin-right: 1.6rem;
+}
+.color-choose {
+  padding: 2rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+.color-choose.black {
+  background-color: #232122;
+}
+.color-choose.honey {
+  background-color: #cfa880;
+}
+.color-choose.chosen {
+  padding: calc(2rem - 1px);
+  border: 1px solid #232122;
 }
