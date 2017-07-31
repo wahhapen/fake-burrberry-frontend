@@ -1,3 +1,50 @@
 /* Fonts for future use 
+  font-family: 'Lora', serif; */
+html {
+  font-size: 62.5%;
+}
+body {
+  margin: 0 auto;
+  max-width: 320px;
+  font-family: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  border: 1px solid #ccc;
+}
+.header {
+  padding: 1.6rem;
+  text-align: center;
+  border-bottom: solid 1px #c6c6c6;
+}
+.logo {
+  width: 138px;
+  height: 1rem;
+  display: inline-block;
+  vertical-align: middle;
+  background-image: url('./assets/logo.png');
+  background-size: contain;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .logo {
+    background-image: url('./assets/logo@2x.png');
+  }
+}
+
+.product-title {
+  margin: 2.4rem 0;
+  padding-right: 1.6rem;
+  padding-left: 1.6rem;
   font-family: 'Lora', serif;
-  font-family: 'Raleway', sans-serif; */
+  font-size: 1.4rem;
+  font-weight: normal;
+  color: #111;
+}
+.gallery-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  overflow: hidden;
+}
+
+.gallery-item {
+  cursor: pointer;
+}
