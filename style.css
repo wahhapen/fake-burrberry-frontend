@@ -3,6 +3,7 @@
 html {
   font-size: 62.5%;
 }
+
 body {
   margin: 0 auto;
   max-width: 320px;
@@ -51,23 +52,25 @@ body {
 }
 
 .product-details {
-  padding-left: 1.6rem;
   padding-right: 1.6rem;
+  padding-bottom: 3.2rem;
+  padding-left: 1.6rem;
 }
 .product-details-wrapper {
+  padding-top: 2.4rem;
+  padding-bottom: 1.6rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 .product-price {
+  margin: 0;
   color: #111;
   font-size: 1.8rem;
 }
 .product-id {
-  font: 1.2rem;
-}
-.color-section {
-  padding-top: 1.6rem;
+  margin: 0;
+  font-size: 1.2rem;
 }
 .color-name {
   margin: 0;
@@ -126,8 +129,8 @@ body {
 .product-sizes,
 .product-in-store,
 .product-size-help {
-  padding-top: 1.6rem;
-  padding-bottom: 1.6rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
   width: 100%;
   border: solid 1px;
   border-radius: 2px;
@@ -157,7 +160,9 @@ body {
 }
 .product-size-help {
   padding-top: 0.8rem;
+  padding-right: 0;
   padding-bottom: 0.8rem;
+  padding-left: 0;
   display: inline-block;
   width: auto;
   border: none;
@@ -166,4 +171,44 @@ body {
 }
 .product-size-help:active {
   color: #666;
+}
+
+.additional-info-title {
+  position: relative;
+  padding-top: 3rem;
+  padding-right: 1.6rem;
+  padding-bottom: 3rem;
+  padding-left: 1.6rem;
+  border-top: 1px solid #c6c6c6;
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+.additional-info-title:before {
+  position: absolute;
+  top: 3.3rem;
+  right: 1rem;
+  width: 10px;
+  height: 10px;
+  content: url('./assets/triangle.svg');
+}
+.shipping .additional-info-title {
+  border-bottom: 1px solid #c6c6c6;
+}
+.additional-info-text {
+  padding-right: 1.6rem;
+  padding-bottom: 3.2rem;
+  padding-left: 1.6rem;
+  font-family: 'Lora', serif;
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  display: none;
+}
+
+.additional-info.opened .additional-info-title:before {
+  transform: rotate(180deg);
+}
+.additional-info.opened .additional-info-text {
+  display: block;
 }
