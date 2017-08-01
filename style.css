@@ -1,16 +1,20 @@
-/* Fonts for future use 
-  font-family: 'Lora', serif; */
+/* 
+* Base styles 
+*/
+
 html {
   font-size: 62.5%;
 }
-
 body {
   margin: 0 auto;
-  max-width: 320px;
   font-family: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: #171717;
-  border: 1px solid #ccc;
 }
+
+/* 
+* Header section styles 
+*/
+
 .header {
   padding: 1.6rem;
   text-align: center;
@@ -29,6 +33,10 @@ body {
     background-image: url('./assets/logo@2x.png');
   }
 }
+
+/* 
+* Product section styles 
+*/
 
 .product-title {
   margin: 2.4rem 0;
@@ -50,6 +58,12 @@ body {
 .gallery-item {
   cursor: pointer;
 }
+
+/* 
+* Product details section
+*
+* Wrapper used for spreading price and id
+*/
 
 .product-details {
   padding-right: 1.6rem;
@@ -117,6 +131,10 @@ body {
   background-color: #c6c6c6;
 }
 
+/* 
+* Product availability section  
+*/
+
 .product-available {
   margin: 0;
   padding: 0;
@@ -173,6 +191,10 @@ body {
   color: #666;
 }
 
+/* 
+* Product description & shipping section
+*/
+
 .additional-info-title {
   position: relative;
   padding-top: 3rem;
@@ -184,6 +206,7 @@ body {
   font-size: 1.4rem;
   font-weight: normal;
   text-transform: uppercase;
+  cursor: pointer;
 }
 .additional-info-title:before {
   position: absolute;
@@ -210,6 +233,12 @@ body {
 .additional-info.opened .additional-info-text {
   display: block;
 }
+
+/* 
+* Recommended products sections
+*
+* products with photo made with 'fukol-grid'
+*/
 
 .recommend {
   padding-top: 4.6rem;
@@ -289,6 +318,10 @@ body {
 .recommend-more-link:hover {
   text-decoration: underline;
 }
+
+/* 
+* Footer section
+*/
 
 .footer {
   padding-top: 3.2rem;
