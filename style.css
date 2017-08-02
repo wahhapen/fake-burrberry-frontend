@@ -268,26 +268,25 @@ body {
 */
 
 .recommend {
-  padding-top: 4.6rem;
+  padding-top: 4.8rem;
   padding-right: 1.6rem;
   padding-bottom: 6.4rem;
   padding-left: 1.6rem;
 }
 .recommend-title {
   margin: 0;
-  margin-bottom: 1.5rem;
   padding-bottom: 0.8rem;
   display: inline-block;
   vertical-align: middle;
   border-bottom: solid 2px #171717;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-weight: 500;
   text-transform: uppercase;
 }
 .recommend-list {
   margin: -1.4rem;
-  padding-top: 1.6rem;
-  padding-bottom: 3.6rem;
+  padding-top: 2.4rem;
+  padding-bottom: 2.8rem;
   padding-left: 0;
   display: flex;
   flex-wrap: wrap;
@@ -295,30 +294,34 @@ body {
 }
 .recommend-item {
   flex: 1 0 13rem;
-  margin: 1.4em;
+  margin-top: 1.4rem;
+  margin-right: 1.4rem;
+  margin-bottom: 1.9rem;
+  margin-left: 1.4rem;
 }
 
 .recommend-item-photo {
   width: 100%;
 }
 .recommend-item-title {
-  margin-top: 1.2rem;
+  margin-top: 0.6rem;
   margin-bottom: 0.8rem;
   font-family: 'Lora', serif;
   font-size: 1.6rem;
-  line-height: 1.5;
+  line-height: 1.19;
   color: #111111;
 }
 .recommend-item-price {
   margin: 0;
   font-size: 1.2rem;
+  line-height: 1.17;
   color: #999;
 }
 
 .recommend-more-title {
   margin: 0;
   padding-top: 1.6rem;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   padding-bottom: 0.8rem;
   display: inline-block;
   vertical-align: middle;
@@ -328,19 +331,20 @@ body {
 }
 .recommend-more-list {
   margin: 0;
-  padding-top: 2.4em;
+  padding-top: 2.5rem;
   padding-left: 0;
   list-style: none;
 }
 .recommend-more-item:not(:last-of-type) {
-  padding-bottom: 1.6rem;
+  padding-bottom: 1.7rem;
 }
 .recommend-more-link {
   font-family: 'Lora', serif;
   font-size: 14px;
   font-style: italic;
-  color: #171717;
   text-decoration: none;
+  line-height: 1.21;
+  color: #171717;
 }
 .recommend-more-link:hover {
   text-decoration: underline;
@@ -371,9 +375,11 @@ body {
   display: inline-block;
   vertical-align: middle;
   border: none;
+  font-family: Raleway;
   font-size: 1.2rem;
-  background-color: transparent;
+  line-height: 1.17;
   color: #999999;
+  background-color: transparent;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -382,13 +388,18 @@ body {
   text-align: center;
 }
 .footer-help {
-  font-size: 1.4rem;
+  margin: 0;
+  margin-bottom: 1.6rem;
+  font-size: 1.6rem;
   font-weight: bold;
+  line-height: 1.19;
 }
 .footer-contact {
+  margin-top: 1.6rem;
   font-family: 'Lora', serif;
   font-size: 1.4rem;
   font-style: italic;
+  line-height: 1.21;
   color: #171717;
 }
 .footer-contact:hover {
