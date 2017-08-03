@@ -9,8 +9,11 @@ body {
   margin: 0 auto;
   font-family: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: #171717;
-  text-rendering: optimizeLegibility !important;
+  text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
+}
+button {
+  font-family: Raleway;
 }
 
 /* 
@@ -40,37 +43,27 @@ body {
   font-weight: normal;
   line-height: 2.4rem;
 }
-.gallery-list {
-  padding: 0;
-  margin: 0;
-  list-style: none;
+.product-gallery {
   display: flex;
-  overflow: hidden;
+  overflow-x: scroll;
 }
 
-.gallery-item {
-  line-height: 0;
-  cursor: pointer;
-}
-.gallery-photo {
+.product-photo {
+  display: block;
   width: 300px;
   height: 400px;
+  object-fit: contain;
+  cursor: pointer;
 }
 
 /* 
 * Product details section
-*
-* Wrapper used for spreading price and id
 */
 
-.product-details {
+.product-info-wrapper {
   padding-top: 1.6rem;
-  padding-right: 1.6rem;
-  padding-bottom: 4rem;
   padding-left: 1.6rem;
-}
-.product-details-wrapper {
-  padding-bottom: 1.6rem;
+  padding-right: 1.6rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -87,67 +80,74 @@ body {
   font-size: 1.2rem;
   line-height: 1.6rem;
 }
-.color-name {
+
+.product-color-wrapper {
+  padding-top: 1.6rem;
+  padding-right: 1.6rem;
+  padding-bottom: 3.2rem;
+  padding-left: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #c6c6c6;
+}
+.product-color-name {
   margin: 0;
   font-size: 1.2rem;
   line-height: 1.6rem;
 }
-.color-list {
-  margin: 0;
+.product-color-pallete {
   padding-top: 1.6em;
-  padding-left: 0;
-  padding-right: 0;
-  padding-bottom: 3.2rem;
   display: flex;
-  list-style: none;
 }
-.color-item:not(:last-of-type) {
+.product-color:not(:last-of-type) {
   margin-right: 1.6rem;
 }
-.color-choose {
+.product-color {
   padding: 2rem;
   box-sizing: border-box;
   border: none;
+  font-size: 0;
+  line-height: 0;
+  color: transparent;
   border-radius: 50%;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
   cursor: pointer;
+  overflow: hidden;
 }
-.color-choose.black {
+.product-color.black {
   background-color: #232122;
 }
-.color-choose.honey {
+.product-color.honey {
   background-color: #cfa880;
 }
-.color-choose.chosen {
+.product-color.current {
   padding: calc(2rem - 1px);
   border: 1px solid #232122;
 }
 
 /* 
-* Product availability section  
+* Product actions section  
 */
 
-.product-available {
-  margin: 0;
-  padding: 0;
+.product-actions {
   padding-top: 3.2rem;
-  border-top: 1px solid #c6c6c6;
-  list-style: none;
+  padding-right: 1.6rem;
+  padding-bottom: 4rem;
+  padding-left: 1.6rem;
+  display: flex;
+  flex-direction: column;
 }
 
-.product-available-item:not(:last-of-type) {
-  margin-bottom: 1.6rem;
-}
 .product-sizes,
 .product-in-store {
   padding-top: 1.5rem;
+  margin-bottom: 1.6rem;
   padding-bottom: 1.5rem;
   width: 100%;
   border: solid 1px;
   border-radius: 2px;
-  font-family: Raleway;
   font-size: 1.2rem;
   line-height: 1.6rem;
   text-align: center;
@@ -184,7 +184,6 @@ body {
   width: auto;
   border: none;
   background-color: transparent;
-  font-family: Raleway;
   font-size: 1.2rem;
   line-height: 1.6rem;
   text-transform: uppercase;
@@ -201,7 +200,19 @@ body {
 * Product description & shipping section
 */
 
-.additional-info-button {
+.product-properties-content {
+  padding-right: 1.6rem;
+  padding-bottom: 3.2rem;
+  padding-left: 1.6rem;
+  font-family: 'Lora', serif;
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  display: none;
+}
+.product-properties.opened .product-properties-content {
+  display: block;
+}
+.product-properties-button {
   position: relative;
   padding-top: 3.2rem;
   padding-right: 1.6rem;
@@ -210,7 +221,7 @@ body {
   width: 100%;
   border: none;
   border-top: 1px solid #c6c6c6;
-  font-family: Raleway;
+  border-bottom: 1px solid #c6c6c6;
   text-align: left;
   background-color: #fff;
   -webkit-appearance: none;
@@ -219,65 +230,58 @@ body {
   cursor: pointer;
 }
 
-.additional-info-button:before {
+.product-properties-button:before {
   position: absolute;
   top: 3.5rem;
   right: 1.6rem;
   content: url('./assets/triangle.svg');
 }
-.shipping .additional-info-button {
-  border-bottom: 1px solid #c6c6c6;
-}
-.additional-info-title {
+.product-properties-title {
   margin: 0;
   font-size: 1.6rem;
-  line-height: 2rem;
+  line-height: 1.9rem;
   font-weight: normal;
   text-transform: uppercase;
 }
-.additional-info-text {
+.product-description {
   margin: 0;
-  padding-right: 1.6rem;
-  padding-bottom: 2.4rem;
-  padding-left: 1.6rem;
-  font-family: 'Lora', serif;
-  font-size: 1.4rem;
-  line-height: 2.4rem;
-  display: none;
 }
-.additional-info.opened {
-  padding-bottom: 0.7rem;
+.product-properties-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
-.additional-info.opened .additional-info-button:before {
+.product-properties.opened .product-properties-button {
+  border-bottom: none;
+}
+.product-properties.opened .product-properties-button:before {
   transform: rotate(180deg);
-}
-.additional-info.opened .additional-info-text {
-  display: block;
 }
 
 /* 
-* Recommended products sections
+* product-recommendeded products sections
 *
 * products with photo made with 'fukol-grid'
 */
 
-.recommend {
+.product-recommended {
   padding-top: 4.9rem;
   padding-right: 1.6rem;
   padding-bottom: 6.4rem;
   padding-left: 1.6rem;
 }
-.recommend-title {
+.product-recommended-title {
   margin: 0;
   padding-bottom: 0.8rem;
   display: inline-block;
   vertical-align: middle;
   border-bottom: solid 1px #171717;
   font-size: 1.6rem;
+  line-height: 1.9rem;
   font-weight: normal;
   text-transform: uppercase;
 }
-.recommend-list {
+.product-recommended-list {
   margin: -1.4rem;
   padding-top: 2.4rem;
   padding-bottom: 3rem;
@@ -286,22 +290,22 @@ body {
   flex-wrap: wrap;
   list-style: none;
 }
-.recommend-item {
+.product-recommended-item {
   flex: 1 0 13rem;
   margin-top: 1.4rem;
   margin-right: 1.4rem;
   margin-bottom: 1.6rem;
   margin-left: 1.4rem;
 }
-.recommend-item-link {
+.product-recommended-link {
   display: block;
   text-decoration: none;
 }
-.recommend-item-photo {
+.product-recommended-photo {
   display: block;
   width: 100%;
 }
-.recommend-item-title {
+.product-recommended-name {
   margin-top: 0.9rem;
   margin-bottom: 0.7rem;
   font-family: 'Lora', serif;
@@ -310,7 +314,7 @@ body {
   font-weight: normal;
   color: #111111;
 }
-.recommend-item-price {
+.product-recommended-price {
   margin: 0;
   font-size: 1.2rem;
   line-height: 1.6rem;
@@ -318,7 +322,7 @@ body {
   color: #999;
 }
 
-.recommend-more-title {
+.product-more-title {
   margin: 0;
   padding-top: 1.6rem;
   font-size: 1.6rem;
@@ -329,16 +333,16 @@ body {
   font-weight: normal;
   text-transform: uppercase;
 }
-.recommend-more-list {
+.product-more-list {
   margin: 0;
   padding-top: 2.4rem;
   padding-left: 0;
   list-style: none;
 }
-.recommend-more-item:not(:last-of-type) {
+.product-more-item:not(:last-of-type) {
   padding-bottom: 1.6rem;
 }
-.recommend-more-link {
+.product-more-link {
   font-family: 'Lora', serif;
   font-size: 14px;
   font-style: italic;
@@ -346,7 +350,7 @@ body {
   line-height: 1.7rem;
   color: #171717;
 }
-.recommend-more-link:hover {
+.product-more-link:hover {
   text-decoration: underline;
 }
 
@@ -364,18 +368,17 @@ body {
 .footer-info {
   margin: 0;
   padding: 0;
-  padding-bottom: 2.4rem;
   list-style: none;
 }
-.footer-info-item:not(:last-of-type) {
-  padding-bottom: 1.6rem;
+.footer-country {
+  margin-bottom: 1.6rem;
 }
-.footer-info-button {
+.footer-country,
+.footer-lang {
   padding: 0;
   display: inline-block;
   vertical-align: middle;
   border: none;
-  font-family: Raleway;
   font-size: 1.2rem;
   line-height: 1.6rem;
   color: #999999;
@@ -385,7 +388,10 @@ body {
   appearance: none;
 }
 .footer-help-wrapper {
-  text-align: center;
+  padding-top: 2.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .footer-help {
   margin: 0;
@@ -395,7 +401,6 @@ body {
   line-height: 1.9rem;
 }
 .footer-contact {
-  margin-top: 1.6rem;
   font-family: 'Lora', serif;
   font-size: 1.4rem;
   font-style: italic;
