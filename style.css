@@ -116,13 +116,13 @@ button {
   cursor: pointer;
   overflow: hidden;
 }
-.product-color.black {
+.product-color.product-color--black {
   background-color: #232122;
 }
-.product-color.honey {
+.product-color.product-color--honey {
   background-color: #cfa880;
 }
-.product-color.current {
+.product-color.product-color--current {
   padding: calc(2rem - 1px);
   border: 1px solid #232122;
 }
@@ -161,12 +161,12 @@ button {
   background-color: #eee;
   color: #171717;
 }
-.product-actions-button.active {
+.product-actions-button.product-actions-button--active {
   background-color: #171717;
   border-color: #171717;
   color: #fff;
 }
-.product-actions-button.active:active {
+.product-actions-button.product-actions-button--active:active {
   background-color: #666;
   color: #fff;
 }
@@ -189,7 +189,7 @@ button {
   -moz-appearance: none;
   appearance: none;
 }
-.product-actions-size-help:active {
+.product-actions-button--secondary:active {
   color: #666;
 }
 
@@ -206,7 +206,7 @@ button {
   line-height: 2.4rem;
   display: none;
 }
-.product-properties.opened .product-properties-content {
+.product-properties.product-properties--opened .product-properties-content {
   display: block;
 }
 .product-properties-button {
@@ -248,10 +248,10 @@ button {
   padding: 0;
   list-style: none;
 }
-.product-properties.opened .product-properties-button {
+.product-properties.product-properties--opened .product-properties-button {
   border-bottom: none;
 }
-.product-properties.opened .product-properties-button:before {
+.product-properties.product-properties--opened .product-properties-button:before {
   transform: rotate(180deg);
 }
 
@@ -279,22 +279,17 @@ button {
   text-transform: uppercase;
 }
 .product-recommended-list {
-  margin: -1.4rem;
   padding-top: 2.4rem;
   padding-bottom: 3rem;
-  padding-left: 0;
   display: flex;
   flex-wrap: wrap;
-  list-style: none;
 }
-.product-recommended-item {
-  flex: 1 0 13rem;
+.product-recommended-link {
+  flex: 1 0 10rem;
   margin-top: 1.4rem;
   margin-right: 1.4rem;
   margin-bottom: 1.6rem;
   margin-left: 1.4rem;
-}
-.product-recommended-link {
   display: block;
   text-decoration: none;
 }
@@ -331,12 +326,11 @@ button {
   text-transform: uppercase;
 }
 .product-more-list {
-  margin: 0;
   padding-top: 2.4rem;
-  padding-left: 0;
-  list-style: none;
+  display: flex;
+  flex-direction: column;
 }
-.product-more-item:not(:last-of-type) {
+.product-more-link:not(:last-of-type) {
   padding-bottom: 1.6rem;
 }
 .product-more-link {

@@ -45,16 +45,16 @@
     <section class="product-color-wrapper">
       <p class="product-color-name">Colour: <span class="color-name-current">Honey</span></p>
       <div class="product-color-pallete">
-        <button class="product-color black" type="button">Black</button>
-        <button class="product-color honey current" type="button">Honey</button>
+        <button class="product-color product-color--black" type="button">Black</button>
+        <button class="product-color product-color--honey product-color--current" type="button">Honey</button>
       </div>
     </section>
     <section class="product-actions">
-      <button class="product-actions-button active" type="button">Select a size</button>
+      <button class="product-actions-button product-actions-button--active" type="button">Select a size</button>
       <button class="product-actions-button" type="button">Find in store</button>
       <button class="product-actions-button product-actions-button--secondary" type="button">Need size help?</button>
     </section>
-    <section class="product-properties description opened">
+    <section class="product-properties product-properties--opened">
       <button class="product-properties-button" type="button"><h2 class="product-properties-title">Description</h2></button>
       <div class="product-properties-content">
         <p>A refined car coat crafted in protective cotton gabardine.</p>
@@ -77,47 +77,39 @@
         </ul>
       </div>
     </section>
-    <section class="product-properties shipping closed">
+    <section class="product-properties product-properties--closed">
       <button class="product-properties-button" type="button"><h2 class="product-properties-title">Shipping & Returns</h2></button>
     </section>
     <section class="product-recommended">
       <h2 class="product-recommended-title">We recommend</h2>
-      <ul class="product-recommended-list">
-        <li class="product-recommended-item">
-          <a class="product-recommended-link" href="#">
+      <div class="product-recommended-list">
+        <a class="product-recommended-link" href="#">
           <img class="product-recommended-photo" src="./assets/rec-1.jpg" alt="Emroided Hooded">
           <h3 class="product-recommended-name">Emroided Hooded</h3>
           <h5 class="product-recommended-price">27 000 руб.</h5>
           </a>
-        </li>
-        <li class="product-recommended-item">
-          <a class="product-recommended-link" href="#">
+        <a class="product-recommended-link" href="#">
             <img class="product-recommended-photo" src="./assets/rec-2.jpg" alt="Relaxed Fit Stretch Jeans">
             <h3 class="product-recommended-name">Relaxed Fit Stretch Jeans</h3>
             <h5 class="product-recommended-price">22 500 руб.</h5>
           </a>
-        </li>
-        <li class="product-recommended-item">
-          <a class="product-recommended-link" href="#">
+        <a class="product-recommended-link" href="#">
             <img class="product-recommended-photo" src="./assets/rec-3.jpg" alt="Leather and House Check">
             <h3 class="product-recommended-name">Leather and House Check</h3>
             <h5 class="product-recommended-price">120 000 руб.</h5>
           </a>
-        </li>
-        <li class="product-recommended-item">
-          <a class="product-recommended-link" href="#">
+        <a class="product-recommended-link" href="#">
             <img class="product-recommended-photo" src="./assets/rec-4.jpg" alt="Leather Wingtip Check">
             <h3 class="product-recommended-name">Leather Wingtip Check</h3>
             <h5 class="product-recommended-price">46 000 руб.</h5>
           </a>
-        </li>
-      </ul>
+      </div>
       <h2 class="product-more-title">More For you</h2>
-      <ul class="product-more-list">
-        <li class="product-more-item"><a href="#" class="product-more-link">Men’s Black Trench Coats</a></li>
-        <li class="product-more-item"><a href="#" class="product-more-link">Men’s Short Trench Coats</a></li>
-        <li class="product-more-item"><a href="#" class="product-more-link">Men’s Long Trench Coats</a></li>
-      </ul>
+      <div class="product-more-list">
+        <a href="#" class="product-more-link">Men’s Black Trench Coats</a>
+        <a href="#" class="product-more-link">Men’s Short Trench Coats</a>
+        <a href="#" class="product-more-link">Men’s Long Trench Coats</a>
+      </div>
     </section>
   </main>
   <footer class="footer">
