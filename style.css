@@ -22,7 +22,7 @@ button {
   justify-content: center;
   border-bottom: 1px solid #c6c6c6;
 }
-@media all and (min-width: 48rem) {
+@media screen and (min-width: 48rem) {
   .header {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
@@ -45,7 +45,7 @@ button {
   font-weight: normal;
   line-height: 1.75rem;
 }
-@media all and (min-width: 48rem) {
+@media screen and (min-width: 48rem) {
   .product-title {
     padding: 1.5rem 0;
     font-size: 1.5rem;
@@ -56,7 +56,7 @@ button {
   overflow-x: scroll;
   height: 25rem;
 }
-@media all and (min-width: 48rem) {
+@media screen and (min-width: 48rem) {
   .product-gallery {
     height: 36rem;
   }
@@ -69,7 +69,7 @@ button {
   object-fit: contain;
   cursor: pointer;
 }
-@media all and (min-width: 48rem) {
+@media screen and (min-width: 48rem) {
   .product-photo {
     width: 27rem;
     height: 36rem;
@@ -88,7 +88,7 @@ button {
   justify-content: space-between;
   align-items: center;
 }
-@media all and (min-width: 48rem) {
+@media screen and (min-width: 48rem) {
   .product-info-wrapper {
     padding-top: 0;
     padding-right: 0;
@@ -117,7 +117,7 @@ button {
   flex-direction: column;
   border-bottom: 1px solid #c6c6c6;
 }
-@media all and (min-width: 48rem) {
+@media screen and (min-width: 48rem) {
   .product-color-wrapper {
     padding-right: 0;
     padding-left: 0;
@@ -173,7 +173,7 @@ button {
   flex-direction: column;
 }
 
-@media all and (min-width: 48rem) {
+@media screen and (min-width: 48rem) {
   .product-actions {
     padding-right: 0;
     padding-left: 0;
@@ -246,6 +246,12 @@ button {
   line-height: 1.5rem;
   display: none;
 }
+@media screen and (min-width: 48rem) {
+  .product-properties-content {
+    padding-right: .5rem;
+    padding-left: .5rem;
+  }
+}
 .product-properties.product-properties--opened .product-properties-content {
   display: block;
 }
@@ -273,6 +279,20 @@ button {
   right: 1rem;
   content: url('./assets/triangle.svg');
 }
+
+@media screen and (min-width: 48rem) {
+  .product-properties-button {
+    padding-top: calc(1.5rem + 1px);
+    padding-right: .5rem;
+    padding-bottom: 1rem;
+    padding-left: .5rem;
+    border-top: none;
+  }
+  .product-properties-button:before {
+    content: normal;
+  }
+}
+
 .product-properties-title {
   margin: 0;
   font-size: 1rem;
