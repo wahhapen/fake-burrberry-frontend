@@ -280,12 +280,13 @@ button {
 }
 .product-recommended-list {
   padding-top: 2.4rem;
+  margin: -1.4rem;
   padding-bottom: 3rem;
   display: flex;
   flex-wrap: wrap;
 }
 .product-recommended-link {
-  flex: 1 0 10rem;
+  flex: 1 0 13rem;
   margin-top: 1.4rem;
   margin-right: 1.4rem;
   margin-bottom: 1.6rem;
