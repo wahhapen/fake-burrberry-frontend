@@ -257,7 +257,7 @@ button {
   .product-properties-content {
     margin: 0;
     padding-right: 0;
-    padding-bottom: 1.5rem;
+    padding-bottom: calc(1.5rem - 1px);
     padding-left: 0;
   }
 }
@@ -295,7 +295,7 @@ button {
   .product-properties-button {
     padding-top: calc(1.5rem + 1px);
     padding-right: .5rem;
-    padding-bottom: 1rem;
+    padding-bottom: calc(1rem + 1px);
     padding-left: .5rem;
     border-top: none;
   }
@@ -387,6 +387,7 @@ button {
 @media screen and (min-width: 48rem) {
   .product-recommended {
     padding-top: 1.25rem;
+    padding-bottom: 2rem;
   }
 }
 .product-recommended-title {
@@ -421,6 +422,7 @@ button {
   .product-recommended-list {
     padding-top: 1rem;
     padding-right: 0;
+    padding-bottom: 0;
     padding-left: 0;
   }
 }
@@ -494,10 +496,63 @@ button {
 
 .footer {
   padding-top: 2rem;
-  padding-right: 1rem;
+  padding-right: .5rem;
   padding-bottom: 2rem;
-  padding-left: 1rem;
+  padding-left: .5rem;
   background-color: #f3f3f3;
+}
+@media screen and (min-width: 48rem) {
+  .footer {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+.footer-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+@media screen and (min-width: 48rem) {
+  .footer-wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.footer-menu {
+  padding-bottom: 2rem;
+  width: 100%;
+  display: none;
+}
+@media screen and (min-width: 48rem) {
+  .footer-menu {
+    display: block;
+  }
+}
+.footer-menu-title {
+  margin: 0;
+  font-size: .75rem;
+  line-height: .875rem;
+  text-transform: uppercase;
+}
+.footer-menu-list {
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.footer-menu-link:not(:last-of-type) {
+  margin-bottom: .75rem;
+}
+.footer-menu-link {
+  font-size: .75rem;
+  font-weight: 600;
+  line-height: 1rem;
+  text-decoration: none;
+  color: #999;
+}
+.footer-menu-link:hover {
+  text-decoration: underline;
 }
 .footer-button:not(:last-of-type) {
   margin-bottom: .9rem;
@@ -509,18 +564,33 @@ button {
   border: none;
   font-size: .75rem;
   line-height: 1rem;
-  color: #999999;
+  color: #999;
   background-color: transparent;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
+
+@media screen and (min-width: 48rem) {
+  .footer-button:not(:last-of-type) {
+    margin-right: 1.5rem;
+  }
+}
+
 .footer-help-wrapper {
   padding-top: 1.5rem;
   display: flex;
+  width: 100%;
   flex-direction: column;
   align-items: center;
 }
+
+@media screen and (min-width: 48rem) {
+  .footer-help-wrapper {
+    display: none;
+  }
+}
+
 .footer-help-title {
   margin: 0;
   margin-bottom: 1rem;
