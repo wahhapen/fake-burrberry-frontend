@@ -76,7 +76,7 @@ button {
 }
 @media screen and (min-width: 48rem) {
   .product-photo {
-    width: 27rem;
+    width: auto;
     height: 36rem;
   }
 }
