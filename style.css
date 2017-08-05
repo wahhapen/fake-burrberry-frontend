@@ -94,6 +94,9 @@ button {
   align-items: center;
 }
 @media screen and (min-width: 48rem) {
+  .product-info {
+    padding-bottom: calc(1.5rem + 1px);
+  }
   .product-info-wrapper {
     padding-top: 0;
     padding-right: 0;
@@ -256,6 +259,7 @@ button {
 @media screen and (min-width: 48rem) {
   .product-properties-content {
     margin: 0;
+    padding-top: calc(1rem + 1px);
     padding-right: 0;
     padding-bottom: calc(1.5rem - 1px);
     padding-left: 0;
@@ -293,11 +297,9 @@ button {
 
 @media screen and (min-width: 48rem) {
   .product-properties-button {
-    padding-top: calc(1.5rem + 1px);
-    padding-right: .5rem;
-    padding-bottom: calc(1rem + 1px);
-    padding-left: .5rem;
-    border-top: none;
+    margin: 0;
+    padding: 0;
+    border: none;
   }
   .product-properties-button:before {
     content: normal;
@@ -319,6 +321,12 @@ button {
   padding: 0;
   list-style: none;
 }
+.product-properties--closed .product-delivery-photo-wrapper {
+  display: none;
+}
+.product-properties--opened .product-delivery-photo-wrapper {
+  display: block;
+}
 .product-properties.product-properties--opened .product-properties-button {
   border-bottom: none;
 }
@@ -326,35 +334,32 @@ button {
   transform: rotate(180deg);
 }
 @media screen and (min-width: 48rem) {
-  .product-shipping {
-    display: none;
+  .product-properties--closed .product-delivery-photo-wrapper {
+    display: block;
+  }
+  .product-properties--closed .product-properties-content {
+    display: block;
   }
 }
 
 /* 
 * Product delivery
 */
-.product-delivery {
-  display: none;
-}
-
-@media screen and (min-width: 48rem) {
-  .product-delivery {
-    display: block;
-  }
-}
 .product-delivery-photo {
   width: 100%;
   height: auto;
   object-fit: contain;
 }
-.product-delivery-title {
-  margin: 0;
-  margin-bottom: 1rem;
-  font-size: 1rem;
-  line-height: 1.1875rem;
-  text-transform: uppercase;
-  font-weight: normal;
+
+@media screen and (min-width: 48rem) {
+  .product-properties-button
+  .product-delivery-title {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.1875rem;
+    text-transform: uppercase;
+    font-weight: normal;
+  }
 }
 .product-delivery-description:not(:last-of-type) {
   margin-bottom: 1.5rem;
@@ -573,6 +578,7 @@ button {
 
 @media screen and (min-width: 48rem) {
   .footer-button:not(:last-of-type) {
+    margin-bottom: 0;
     margin-right: 1.5rem;
   }
 }
