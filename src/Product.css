@@ -292,7 +292,7 @@ button {
   position: absolute;
   top: 2rem;
   right: 1rem;
-  content: url('./assets/triangle.svg');
+  content: url('./triangle.svg');
 }
 
 @media screen and (min-width: 48rem) {
