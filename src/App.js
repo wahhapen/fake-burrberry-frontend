@@ -1,7 +1,54 @@
 import React, { Component } from 'react'
 import { Helmet } from 'react-helmet'
-import './Product.css'
+import './App.css'
 import logo from './logo.svg'
+
+const photos = [
+  {
+    name: 'gabardine-coat-1',
+    alt: 'Long Cotton Gabardine Car Coat, Front'
+  },
+  {
+    name: 'gabardine-coat-2',
+    alt: 'Long Cotton Gabardine Car Coat, Sleeves'
+  },
+  {
+    name: 'gabardine-coat-3',
+    alt: 'Long Cotton Gabardine Car Coat, Collar'
+  },
+  {
+    name: 'gabardine-coat-4',
+    alt: 'Long Cotton Gabardine Car Coat, Back'
+  },
+  {
+    name: 'gabardine-coat-5',
+    alt: 'Long Cotton Gabardine Car Coat, Collar'
+  }
+]
+
+function Header() {
+  return (
+    <header className="header">
+      <a className="logo" href="/" title="Burberry">
+        <img className="logo-img" src={logo} alt="Burberry" />
+      </a>
+    </header>
+  )
+}
+const Gallery = photos =>
+  <div className="product-gallery">
+    {photos.props.map(renderPhoto)}
+  </div>
+const renderPhoto = photo =>
+  <img
+    key={photo.name}
+    className="product-photo"
+    src={`${process.env.PUBLIC_URL}/assets/${photo.name}.jpg`}
+    srcSet={`
+          ${process.env.PUBLIC_URL}/assets/${photo.name}@2x.jpg 2x,
+          ${process.env.PUBLIC_URL}/assets/${photo.name}@3x.jpg 3x`}
+    alt={photo.alt}
+  />
 
 class Product extends Component {
   render() {
@@ -14,11 +61,7 @@ class Product extends Component {
             content="Long Cotton Gabardine refined car coat crafted in protective cotton gabardine. Invented by Thomas Burberry in 1879, cotton gabardine is a tightly woven and breathable fabric that protects against wind and rain."
           />
         </Helmet>
-        <header className="header">
-          <a className="logo" href="/" title="Burberry">
-            <img className="logo-img" src={logo} alt="Burberry" />
-          </a>
-        </header>
+        <Header />
         <main className="product">
           <section className="product-info ">
             <div className="container">
@@ -26,36 +69,7 @@ class Product extends Component {
               <div className="row">
                 <div className="col-xs-12 col-md-7">
                   <div className="product-gallery">
-                    <img
-                      className="product-photo"
-                      src="./assets/gabardine-coat-1.jpg"
-                      srcSet="./assets/gabardine-coat-1@2x.jpg 2x, ./assets/gabardine-coat-1@3x.jpg 3x"
-                      alt="Long Cotton Gabardine Car Coat, Front"
-                    />
-                    <img
-                      className="product-photo"
-                      src="/assets/gabardine-coat-2.jpg"
-                      srcSet="/assets/gabardine-coat-2@2x.jpg 2x, /assets/gabardine-coat-2@3x.jpg 3x"
-                      alt="Long Cotton Gabardine Car Coat, Sleeves"
-                    />
-                    <img
-                      className="product-photo"
-                      src="/assets/gabardine-coat-3.jpg"
-                      srcSet="/assets/gabardine-coat-3@2x.jpg 2x, /assets/gabardine-coat-3@3x.jpg 3x"
-                      alt="Long Cotton Gabardine Car Coat, Collar"
-                    />
-                    <img
-                      className="product-photo"
-                      src="/assets/gabardine-coat-4.jpg"
-                      srcSet="/assets/gabardine-coat-4@2x.jpg 2x, /assets/gabardine-coat-4@3x.jpg 3x"
-                      alt="Long Cotton Gabardine Car Coat, Back"
-                    />
-                    <img
-                      className="product-photo"
-                      src="/assets/gabardine-coat-5.jpg"
-                      srcSet="/assets/gabardine-coat-5@2x.jpg 2x, /assets/gabardine-coat-5@3x.jpg 3x"
-                      alt="Long Cotton Gabardine Car Coat, Collar"
-                    />
+                    <Gallery props={photos} />
                   </div>
                 </div>
                 <div className="col-xs-12 col-md-5">
