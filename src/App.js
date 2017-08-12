@@ -4,9 +4,17 @@ import Header from './Header'
 import Footer from './Footer'
 import Product from './Product/Show'
 
+import { IntlProvider, addLocaleData } from 'react-intl'
+import en from 'react-intl/locale-data/en'
+import ru from 'react-intl/locale-data/ru'
+
+addLocaleData([...en, ...ru])
+
 export default () =>
-  <div>
-    <Header />
-    <Product />
-    <Footer />
-  </div>
+  <IntlProvider locale={navigator.language}>
+    <div>
+      <Header />
+      <Product />
+      <Footer />
+    </div>
+  </IntlProvider>
