@@ -1,25 +1,25 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
 
-const Parts = styled.section`
+const Showcase = styled.section`
   display: none;
   @media screen and (min-width: 62rem) {
     display: block;
     margin: 4rem 0;
   }
 `
-const Part = styled.img`
+const Photo = styled.img`
   display: block;
   width: 100%;
   ${props => props.center && css`margin-top: 2rem;`};
   ${props => props.bottom && css`margin-top: 6rem;`};
 `
 export default () =>
-  <Parts>
+  <Showcase>
     <div className="container">
       <div className="row">
         <div className="col-lg-4">
-          <Part
+          <Photo
             center
             src={`${process.env.PUBLIC_URL}/assets/gabardine-coat-3.jpg`}
             srcSet={`
@@ -29,7 +29,7 @@ export default () =>
           />
         </div>
         <div className="col-lg-4">
-          <Part
+          <Photo
             bottom
             src={`${process.env.PUBLIC_URL}/assets/gabardine-coat-4.jpg`}
             srcSet={`
@@ -39,7 +39,7 @@ export default () =>
           />
         </div>
         <div className="col-lg-4">
-          <Part
+          <Photo
             src={`${process.env.PUBLIC_URL}/assets/gabardine-coat-5.jpg`}
             srcSet={`
           ${process.env.PUBLIC_URL}/assets/gabardine-coat-5@2x.jpg 2x,
@@ -49,4 +49,4 @@ export default () =>
         </div>
       </div>
     </div>
-  </Parts>
+  </Showcase>

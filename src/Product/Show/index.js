@@ -5,7 +5,7 @@ import { Helmet } from 'react-helmet'
 import Gallery from './Gallery'
 import Details from './Details'
 import Description from './Description'
-import Parts from './Parts'
+import Showcase from './Showcase'
 import Delivery from './Delivery'
 import Suggestions from './Suggestions'
 
@@ -99,7 +99,7 @@ export default () =>
         <li>Item 39428531</li>
       </ul>
     </Description>
-    <Parts />
+    <Showcase />
     <Delivery />
     <Suggestions />
   </main>

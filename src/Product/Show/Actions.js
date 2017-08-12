@@ -48,7 +48,7 @@ const Button = styled.button`
     }
   }
 `
-const HelpButton = styled.button`
+const SecondaryButton = styled.button`
   margin-bottom: 0;
   padding-top: .5rem;
   padding-right: 0;
@@ -80,5 +80,5 @@ export default () =>
       Add to bag
     </Button>
     <Button type="button">Find in store</Button>
-    <HelpButton type="button">Need size help?</HelpButton>
+    <SecondaryButton type="button">Need size help?</SecondaryButton>
   </Section>

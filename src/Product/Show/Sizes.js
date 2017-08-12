@@ -53,7 +53,7 @@ const Button = styled.button`
   box-shadow: inset 0px 0px 0px 1px #171717;
 `
 
-const HelpButton = styled.button`
+const SecondaryButton = styled.button`
   display: inline-block;
   margin: 0;
   padding: 0;
@@ -73,7 +73,7 @@ export default () =>
       <SelectedSize>
         Size: <strong>XL</strong>
       </SelectedSize>
-      <HelpButton type="button">need size help?</HelpButton>
+      <SecondaryButton type="button">Need size help?</SecondaryButton>
     </Header>
     <Buttons>
       <Button>S</Button>
