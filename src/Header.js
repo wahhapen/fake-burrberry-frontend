@@ -12,12 +12,28 @@ const Header = styled.header`
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
   }
+  @media screen and (min-width: 62rem) {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: none;
+  }
 `
-const HeaderLink = styled.a`line-height: 10px;`
+const HeaderLink = styled.a`
+  line-height: 10px;
+  @media screen and (min-width: 62rem) {
+    line-height: 16px;
+  }
+`
+const Logo = styled.img`
+  height: 10px;
+  @media screen and (min-width: 62rem) {
+    height: 16px;
+  }
+`
 
 export default () =>
   <Header>
     <HeaderLink href="/">
-      <img src={logo} alt="Burberry" />
+      <Logo src={logo} alt="Burberry" />
     </HeaderLink>
   </Header>

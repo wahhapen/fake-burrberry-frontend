@@ -8,6 +8,9 @@ const Gallery = styled.section`
   @media screen and (min-width: 48rem) {
     height: 36rem;
   }
+  @media screen and (min-width: 62rem) {
+    display: none;
+  }
 `
 
 const Photo = styled.img`

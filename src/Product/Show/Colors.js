@@ -13,6 +13,11 @@ const Section = styled.section`
     padding-right: 0;
     padding-left: 0;
   }
+  @media screen and (min-width: 62rem) {
+    padding: 0;
+    display: inline-block;
+    border-bottom: none;
+  }
 `
 const SelectedColor = styled.div`
   margin: 0;
