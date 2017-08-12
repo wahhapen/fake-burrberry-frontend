@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { IntlProvider, FormattedNumber } from 'react-intl'
+import { FormattedNumber } from 'react-intl'
 
 import Colors from './Colors'
 import Actions from './Actions'
@@ -36,9 +36,7 @@ export default () =>
   <div>
     <Pricing>
       <Price>
-        <IntlProvider locale="en">
-          <FormattedNumber value={110000} style="currency" currency="RUB" />
-        </IntlProvider>
+        <FormattedNumber value={110000} style="currency" currency="RUB" />
       </Price>
       <Id>Item 39428531</Id>
     </Pricing>

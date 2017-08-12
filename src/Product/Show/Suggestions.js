@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import Similar from './Similar'
 
-import { IntlProvider, FormattedNumber } from 'react-intl'
+import { FormattedNumber } from 'react-intl'
 
 const Section = styled.section`
   padding-top: 3.0625rem;
@@ -117,9 +117,7 @@ export default () =>
                   {item.name}
                 </Name>
                 <Price>
-                  <IntlProvider locale="en">
-                    <FormattedNumber value={item.price} style="currency" currency="RUB" />
-                  </IntlProvider>
+                  <FormattedNumber value={item.price} style="currency" currency="RUB" />
                 </Price>
               </Card>
             </div>
