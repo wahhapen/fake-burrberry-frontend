@@ -114,7 +114,7 @@ class Description extends Component {
             </div>
             <div className="col-lg-8">
               <Photo
-                src={`${process.env.PUBLIC_URL}/assets/gabardine-coat-2@x.jpg`}
+                src={`${process.env.PUBLIC_URL}/assets/gabardine-coat-2.jpg`}
                 srcSet={`
                   ${process.env.PUBLIC_URL}/assets/gabardine-coat-2@2x.jpg 2x,
                   ${process.env.PUBLIC_URL}/assets/gabardine-coat-2@3x.jpg 3x`}
