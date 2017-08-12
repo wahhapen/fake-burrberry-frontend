@@ -35,7 +35,7 @@ const Id = styled.p`
 const Name = styled.h1`
   display: none;
   margin: 0;
-  padding: 10rem 0 0 0;
+  padding: 10rem 0 .5rem 0;
   font-family: "Lora", serif;
   font-size: 1.5rem;
   line-height: 1.75rem;
