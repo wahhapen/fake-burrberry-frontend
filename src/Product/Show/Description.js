@@ -75,6 +75,14 @@ const Content = styled.div`
     display: block;
   }
 `
+const Section = styled.section`@media screen and (min-width: 62rem) {margin-top: 4rem;}`
+const Photo = styled.img`
+  display: none;
+  @media screen and (min-width: 62rem) {
+    display: block;
+    width: 100%;
+  }
+`
 
 class Description extends Component {
   constructor(props) {
@@ -93,14 +101,29 @@ class Description extends Component {
 
   render() {
     return (
-      <section className="container">
-        <Header onClick={this.handleClick}>
-          <Heading isOpened={this.state.isOpened}>Description</Heading>
-        </Header>
-        <Content isOpened={this.state.isOpened}>
-          {this.props.children}
-        </Content>
-      </section>
+      <Section>
+        <div className="container">
+          <div className="row">
+            <div className="col-xs-12 col-lg-4">
+              <Header onClick={this.handleClick}>
+                <Heading isOpened={this.state.isOpened}>Description</Heading>
+              </Header>
+              <Content isOpened={this.state.isOpened}>
+                {this.props.children}
+              </Content>
+            </div>
+            <div className="col-lg-8">
+              <Photo
+                src={`${process.env.PUBLIC_URL}/assets/gabardine-coat-2@x.jpg`}
+                srcSet={`
+                  ${process.env.PUBLIC_URL}/assets/gabardine-coat-2@2x.jpg 2x,
+                  ${process.env.PUBLIC_URL}/assets/gabardine-coat-2@3x.jpg 3x`}
+                alt="Long Cotton Gabardine Car Coat, Sleeves"
+              />
+            </div>
+          </div>
+        </div>
+      </Section>
     )
   }
 }

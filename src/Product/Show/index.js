@@ -5,12 +5,17 @@ import { Helmet } from 'react-helmet'
 import Gallery from './Gallery'
 import Details from './Details'
 import Description from './Description'
+import Parts from './Parts'
 import Delivery from './Delivery'
 import Suggestions from './Suggestions'
 
 const Wrapper = styled.section`
   @media screen and (min-width: 48rem) {
     padding-bottom: calc(1.5rem + 1px);
+  }
+  @media screen and (min-width: 62rem) {
+    padding-bottom: 0;
+    background: #d4bdad;
   }
 `
 const Title = styled.h1`
@@ -26,7 +31,22 @@ const Title = styled.h1`
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
+  @media screen and (min-width: 62rem) {
+    display: none;
+  }
 `
+const FeaturedImage = styled.img`
+  display: block;
+  margin: 0;
+  position: inherit;
+  height: 40rem;
+  width: auto;
+  display: none;
+  @media screen and (min-width: 62rem) {
+    display: block;
+  }
+`
+
 export default () =>
   <main>
     <Helmet>
@@ -40,10 +60,17 @@ export default () =>
       <div className="container">
         <Title>Long Cotton Gabardine Car Coat</Title>
         <div className="row">
-          <div className="col-xs-12 col-md-7">
+          <div className="col-xs-12 col-md-7 col-lg-6">
             <Gallery />
+            <FeaturedImage
+              src={`${process.env.PUBLIC_URL}/assets/gabardine-coat-1.jpg`}
+              srcSet={`
+                    ${process.env.PUBLIC_URL}/assets/gabardine-coat-1@2x.jpg 2x,
+                    ${process.env.PUBLIC_URL}/assets/gabardine-coat-1@3x.jpg 3x`}
+              alt="Long Cotton Gabardine Car Coat, Front"
+            />
           </div>
-          <div className="col-xs-12 col-md-5">
+          <div className="col-xs-12 col-md-5 col-lg-6">
             <Details />
           </div>
         </div>
@@ -72,6 +99,7 @@ export default () =>
         <li>Item 39428531</li>
       </ul>
     </Description>
+    <Parts />
     <Delivery />
     <Suggestions />
   </main>

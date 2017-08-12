@@ -12,6 +12,10 @@ const Section = styled.div`
     padding-right: 0;
     padding-left: 0;
   }
+  @media screen and (min-width: 62rem) {
+    flex-direction: row;
+    padding: 0;
+  }
 `
 const Button = styled.button`
   padding-top: .9375rem;
@@ -24,13 +28,24 @@ const Button = styled.button`
   line-height: 1rem;
   text-align: center;
   text-transform: uppercase;
-  background-color: ${props => (props.active ? '#171717;' : '#fff')};
-  border-color: ${props => (props.active ? '#171717;' : '#999')};
+  background-color: ${props => (props.active ? '#171717' : 'transparent')};
+  border-color: ${props => (props.active ? '#171717' : '#999')};
   appearance: none;
   color: ${props => (props.active ? '#fff' : '#171717')};
   &:active {
     background-color: ${props => (props.active ? '#666;' : '#eee')};
     color: ${props => (props.active ? '#fff' : '#171717')};
+  }
+  @media screen and (min-width: 62rem) {
+    border-color: #171717;
+    display: ${props => (props.lgHidden ? 'none' : 'block')};
+    &:not(:last-of-type) {
+      margin-right: 1rem;
+    }
+    &:active {
+      background-color: ${props => (props.active ? '#333' : 'transparent')};
+      border-color: #ccc;
+    }
   }
 `
 const HelpButton = styled.button`
@@ -51,13 +66,19 @@ const HelpButton = styled.button`
   &:active {
     color: #666;
   }
+  @media screen and (min-width: 62rem) {
+    display: none;
+  }
 `
 
 export default () =>
   <Section>
-    <Button active type="button">
-      select a size
+    <Button lgHidden type="button">
+      Select a size
     </Button>
-    <Button type="button">find in store</Button>
-    <HelpButton type="button">need size help?</HelpButton>
+    <Button active type="button">
+      Add to bag
+    </Button>
+    <Button type="button">Find in store</Button>
+    <HelpButton type="button">Need size help?</HelpButton>
   </Section>
