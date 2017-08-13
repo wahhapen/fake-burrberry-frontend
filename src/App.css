@@ -1,0 +1,11 @@
+/* 
+* Base styles 
+*/
+body {
+  font-family: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #171717;
+  text-rendering: optimizeLegibility;
+}
+button {
+  font-family: Raleway;
+}
