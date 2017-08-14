@@ -1,9 +1,9 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from 'react';
+import styled from 'styled-components';
 
-import Navigation from './Navigation'
-import Preferences from './Preferences'
-import Help from './Help'
+import Navigation from './Navigation';
+import Preferences from './Preferences';
+import Help from './Help';
 
 const Footer = styled.footer`
   padding-top: 2rem;
@@ -19,7 +19,7 @@ const Footer = styled.footer`
     margin-bottom: 1rem;
     padding: 4rem .5rem;
   }
-`
+`;
 const Wrapper = styled.footer`
   display: flex;
   flex-direction: column;
@@ -28,9 +28,9 @@ const Wrapper = styled.footer`
     flex-direction: row;
     flex-wrap: wrap;
   }
-`
+`;
 export default () =>
-  <Footer>
+  (<Footer>
     <div className="container">
       <Wrapper>
         <Navigation />
@@ -38,4 +38,4 @@ export default () =>
         <Help />
       </Wrapper>
     </div>
-  </Footer>
+  </Footer>);

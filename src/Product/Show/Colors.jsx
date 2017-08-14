@@ -1,5 +1,5 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from 'react';
+import styled from 'styled-components';
 
 const Section = styled.section`
   padding-top: 1rem;
@@ -18,19 +18,19 @@ const Section = styled.section`
     display: inline-block;
     border-bottom: none;
   }
-`
+`;
 const SelectedColor = styled.div`
   margin: 0;
   font-size: .75rem;
   line-height: 1rem;
-`
+`;
 
-const Value = styled.strong`font-size: .75rem;`
+const Value = styled.strong`font-size: .75rem;`;
 
 const Buttons = styled.div`
   padding-top: 1rem;
   display: flex;
-`
+`;
 const Button = styled.button`
   padding: calc(1.25rem - 1px);
   box-sizing: border-box;
@@ -47,10 +47,10 @@ const Button = styled.button`
   &:not(:last-of-type) {
     margin-right: 1rem;
   }
-`
+`;
 
 export default () =>
-  <Section>
+  (<Section>
     <SelectedColor>
       Colour: <Value>Honey</Value>
     </SelectedColor>
@@ -62,4 +62,4 @@ export default () =>
         Select honey color
       </Button>
     </Buttons>
-  </Section>
+  </Section>);

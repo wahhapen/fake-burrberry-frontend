@@ -1,5 +1,5 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from 'react';
+import styled from 'styled-components';
 
 const Button = styled.button`
   padding: 0;
@@ -20,10 +20,10 @@ const Button = styled.button`
       margin-right: 1.5rem;
     }
   }
-`
+`;
 
 export default () =>
-  <div>
+  (<div>
     <Button type="button">Shipping country: Russian Federation</Button>
     <Button type="button">Language: English</Button>
-  </div>
+  </div>);

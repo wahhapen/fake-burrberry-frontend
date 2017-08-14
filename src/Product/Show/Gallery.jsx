@@ -1,5 +1,5 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from 'react';
+import styled from 'styled-components';
 
 const Gallery = styled.section`
   display: flex;
@@ -11,7 +11,7 @@ const Gallery = styled.section`
   @media screen and (min-width: 62rem) {
     display: none;
   }
-`
+`;
 
 const Photo = styled.img`
   display: block;
@@ -23,10 +23,10 @@ const Photo = styled.img`
     width: auto;
     height: 36rem;
   }
-`
+`;
 
 export default () =>
-  <Gallery>
+  (<Gallery>
     <Photo
       src={`${process.env.PUBLIC_URL}/assets/gabardine-coat-1.jpg`}
       srcSet={`
@@ -62,4 +62,4 @@ export default () =>
           ${process.env.PUBLIC_URL}/assets/gabardine-coat-5@3x.jpg 3x`}
       alt="Long Cotton Gabardine Car Coat, Collar"
     />
-  </Gallery>
+  </Gallery>);

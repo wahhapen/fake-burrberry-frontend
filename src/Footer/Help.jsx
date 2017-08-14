@@ -1,5 +1,5 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from 'react';
+import styled from 'styled-components';
 
 const Section = styled.div`
   padding-top: 1.5rem;
@@ -10,14 +10,14 @@ const Section = styled.div`
   @media screen and (min-width: 48rem) {
     display: none;
   }
-`
+`;
 const Title = styled.h4`
   margin: 0;
   margin-bottom: 1rem;
   font-size: 1rem;
   font-weight: bold;
   line-height: 1.1875rem;
-`
+`;
 const Link = styled.a`
   font-family: 'Lora', serif;
   font-size: .875rem;
@@ -27,9 +27,9 @@ const Link = styled.a`
   &:hover {
     text-decoration: underline;
   }
-`
+`;
 export default () =>
-  <Section>
+  (<Section>
     <Title>Need help?</Title>
     <Link href="link">Find out more and contact us</Link>
-  </Section>
+  </Section>);

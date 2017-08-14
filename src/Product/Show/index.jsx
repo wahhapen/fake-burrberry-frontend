@@ -1,13 +1,13 @@
-import React from 'react'
-import styled from 'styled-components'
-import { Helmet } from 'react-helmet'
+import React from 'react';
+import styled from 'styled-components';
+import { Helmet } from 'react-helmet';
 
-import Gallery from './Gallery'
-import Details from './Details'
-import Description from './Description'
-import Showcase from './Showcase'
-import Delivery from './Delivery'
-import Suggestions from './Suggestions'
+import Gallery from './Gallery';
+import Details from './Details';
+import Description from './Description';
+import Showcase from './Showcase';
+import Delivery from './Delivery';
+import Suggestions from './Suggestions';
 
 const Wrapper = styled.section`
   @media screen and (min-width: 48rem) {
@@ -17,7 +17,7 @@ const Wrapper = styled.section`
     padding-bottom: 0;
     background: #d4bdad;
   }
-`
+`;
 const Title = styled.h1`
   margin: 0;
   padding: 1rem .5rem;
@@ -34,7 +34,7 @@ const Title = styled.h1`
   @media screen and (min-width: 62rem) {
     display: none;
   }
-`
+`;
 const FeaturedImage = styled.img`
   display: block;
   margin: 0;
@@ -45,10 +45,10 @@ const FeaturedImage = styled.img`
   @media screen and (min-width: 62rem) {
     display: block;
   }
-`
+`;
 
 export default () =>
-  <main>
+  (<main>
     <Helmet>
       <title>Long Cotton Gabardine Car Coat | Men - Burberry</title>
       <meta
@@ -102,4 +102,4 @@ export default () =>
     <Showcase />
     <Delivery />
     <Suggestions />
-  </main>
+  </main>);
