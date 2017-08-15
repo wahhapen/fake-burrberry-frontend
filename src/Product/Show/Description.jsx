@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 import triangle from './triangle.svg';
 
@@ -127,5 +128,10 @@ class Description extends Component {
     );
   }
 }
+
+Description.propTypes = {
+  isOpened: PropTypes.bool.isRequired,
+  children: PropTypes.element.isRequired,
+};
 
 export default Description;

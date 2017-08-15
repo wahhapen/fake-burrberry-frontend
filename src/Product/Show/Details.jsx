@@ -1,3 +1,4 @@
+/* eslint react/style-prop-object: 0 */
 import React from 'react';
 import styled from 'styled-components';
 

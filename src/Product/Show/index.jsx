@@ -47,14 +47,19 @@ const FeaturedImage = styled.img`
   }
 `;
 
+const product = {
+  name: 'Long Cotton Gabardine Car Coat | Men - Burberry',
+  description:
+    'Long Cotton Gabardine refined car coat crafted in protective cotton gabardine. Invented by Thomas Burberry in 1879, cotton gabardine is a tightly woven and breathable fabric that protects against wind and rain.',
+};
+
 export default () =>
   (<main>
     <Helmet>
-      <title>Long Cotton Gabardine Car Coat | Men - Burberry</title>
-      <meta
-        name="description"
-        content="Long Cotton Gabardine refined car coat crafted in protective cotton gabardine. Invented by Thomas Burberry in 1879, cotton gabardine is a tightly woven and breathable fabric that protects against wind and rain."
-      />
+      <title>
+        {product.name}
+      </title>
+      <meta name="description" content={product.description} />
     </Helmet>
     <Wrapper>
       <div className="container">
