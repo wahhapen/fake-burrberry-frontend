@@ -1,8 +1,8 @@
-import React from 'react'
-import styled from 'styled-components'
-import Similar from './Similar'
-
-import { FormattedNumber } from 'react-intl'
+/* eslint react/style-prop-object: 0 */
+import React from 'react';
+import styled from 'styled-components';
+import { FormattedNumber } from 'react-intl';
+import Similar from './Similar';
 
 const Section = styled.section`
   padding-top: 3.0625rem;
@@ -15,7 +15,7 @@ const Section = styled.section`
     padding-top: 4rem;
     padding-bottom: 0;
   }
-`
+`;
 
 const Heading = styled.h2`
   margin: 0;
@@ -35,7 +35,7 @@ const Heading = styled.h2`
     display: block;
     text-align: center;
   }
-`
+`;
 
 const Cards = styled.div`
   padding-top: 1.5rem;
@@ -53,13 +53,13 @@ const Cards = styled.div`
   @media screen and (min-width: 62rem) {
     padding: 2rem 0 0 0;
   }
-`
+`;
 
 const Card = styled.a`
   margin-bottom: 2rem;
   display: block;
   text-decoration: none;
-`
+`;
 
 const Photo = styled.img`
   display: block;
@@ -69,7 +69,7 @@ const Photo = styled.img`
   @media screen and (min-width: 62rem) {
     width: 14.5rem;
   }
-`
+`;
 
 const Name = styled.h3`
   margin-top: .5rem;
@@ -87,7 +87,7 @@ const Name = styled.h3`
     line-height: 20px;
     color: #171717;
   }
-`
+`;
 
 const Price = styled.h4`
   margin: 0;
@@ -95,43 +95,43 @@ const Price = styled.h4`
   line-height: .875rem;
   font-weight: normal;
   color: #999;
-`
+`;
 
 const recommendations = [
   {
     id: 'rec-1',
     name: 'Emroided Hooded',
     price: 27000,
-    href: '/emroided-hooded'
+    href: '/emroided-hooded',
   },
   {
     id: 'rec-2',
     name: 'Relaxed Fit Stretch Jeans',
     price: 22500,
-    href: '/relaxed-fit-stretch-jeans'
+    href: '/relaxed-fit-stretch-jeans',
   },
   {
     id: 'rec-3',
     name: 'Leather and House',
     price: 120000,
-    href: '/leather-and-house'
+    href: '/leather-and-house',
   },
   {
     id: 'rec-4',
     name: 'Leather Wingtip',
     price: 46000,
-    href: '/leather-wingtip'
-  }
-]
+    href: '/leather-wingtip',
+  },
+];
 
 export default () =>
-  <Section>
+  (<Section>
     <div className="container">
       <Heading>we recommend</Heading>
       <Cards>
         <div className="row">
           {recommendations.map(item =>
-            <div className="col-xs-6 col-md-3" key={item.id}>
+            (<div className="col-xs-6 col-md-3" key={item.id}>
               <Card href={item.href}>
                 <Photo src={`${process.env.PUBLIC_URL}/assets/${item.id}.jpg`} alt={item.name} />
                 <Name>
@@ -141,10 +141,10 @@ export default () =>
                   <FormattedNumber value={item.price} style="currency" currency="RUB" />
                 </Price>
               </Card>
-            </div>
+            </div>),
           )}
         </div>
       </Cards>
       <Similar />
     </div>
-  </Section>
+  </Section>);

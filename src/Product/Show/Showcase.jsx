@@ -1,5 +1,5 @@
-import React from 'react'
-import styled, { css } from 'styled-components'
+import React from 'react';
+import styled, { css } from 'styled-components';
 
 const Showcase = styled.section`
   display: none;
@@ -7,15 +7,15 @@ const Showcase = styled.section`
     display: block;
     margin: 4rem 0;
   }
-`
+`;
 const Photo = styled.img`
   display: block;
   width: 100%;
   ${props => props.center && css`margin-top: 2rem;`};
   ${props => props.bottom && css`margin-top: 6rem;`};
-`
+`;
 export default () =>
-  <Showcase>
+  (<Showcase>
     <div className="container">
       <div className="row">
         <div className="col-lg-4">
@@ -49,4 +49,4 @@ export default () =>
         </div>
       </div>
     </div>
-  </Showcase>
+  </Showcase>);

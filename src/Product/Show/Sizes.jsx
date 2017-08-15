@@ -1,5 +1,5 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from 'react';
+import styled from 'styled-components';
 
 const Section = styled.div`
   display: none;
@@ -9,12 +9,12 @@ const Section = styled.div`
     margin: 0 0 0 8.5rem;
     padding: 0;
   }
-`
+`;
 
 const Header = styled.div`
   display: flex;
   justify-content: space-between;
-`
+`;
 
 const SelectedSize = styled.p`
   display: inline-block;
@@ -29,13 +29,13 @@ const SelectedSize = styled.p`
   @media screen and (min-width: 48rem) {
     padding: 0;
   }
-`
+`;
 
 const Buttons = styled.div`
   margin: 0;
   margin-top: 1rem;
   padding: 0;
-`
+`;
 
 const Button = styled.button`
   display: inline-block;
@@ -51,7 +51,7 @@ const Button = styled.button`
   border-radius: 2px;
   border: none;
   box-shadow: inset 0px 0px 0px 1px #171717;
-`
+`;
 
 const SecondaryButton = styled.button`
   display: inline-block;
@@ -65,10 +65,10 @@ const SecondaryButton = styled.button`
   background: transparent;
   border: none;
   cursor: pointer;
-`
+`;
 
 export default () =>
-  <Section>
+  (<Section>
     <Header>
       <SelectedSize>
         Size: <strong>XL</strong>
@@ -81,4 +81,4 @@ export default () =>
       <Button>L</Button>
       <Button isSelected>XL</Button>
     </Buttons>
-  </Section>
+  </Section>);

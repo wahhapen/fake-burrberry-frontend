@@ -1,6 +1,7 @@
-import React, { Component } from 'react'
-import styled, { css } from 'styled-components'
-import triangle from './triangle.svg'
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import styled, { css } from 'styled-components';
+import triangle from './triangle.svg';
 
 const Header = styled.button`
   position: relative;
@@ -38,14 +39,14 @@ const Header = styled.button`
       content: normal;
     }
   }
-`
+`;
 const Heading = styled.h2`
   margin: 0;
   font-size: 1rem;
   line-height: 1.1875rem;
   font-weight: normal;
   text-transform: uppercase;
-`
+`;
 const Content = styled.div`
   margin-right: -.5rem;
   margin-left: -.5rem;
@@ -74,29 +75,29 @@ const Content = styled.div`
     padding-left: 0;
     display: block;
   }
-`
-const Section = styled.section`@media screen and (min-width: 62rem) {margin-top: 4rem;}`
+`;
+const Section = styled.section`@media screen and (min-width: 62rem) {margin-top: 4rem;}`;
 const Photo = styled.img`
   display: none;
   @media screen and (min-width: 62rem) {
     display: block;
     width: 100%;
   }
-`
+`;
 
 class Description extends Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
-      isOpened: this.props.isOpened
-    }
-    this.handleClick = this.handleClick.bind(this)
+      isOpened: this.props.isOpened,
+    };
+    this.handleClick = this.handleClick.bind(this);
   }
 
   handleClick() {
     this.setState(prevState => ({
-      isOpened: !prevState.isOpened
-    }))
+      isOpened: !prevState.isOpened,
+    }));
   }
 
   render() {
@@ -124,8 +125,13 @@ class Description extends Component {
           </div>
         </div>
       </Section>
-    )
+    );
   }
 }
 
-export default Description
+Description.propTypes = {
+  isOpened: PropTypes.bool.isRequired,
+  children: PropTypes.element.isRequired,
+};
+
+export default Description;

@@ -1,5 +1,5 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from 'react';
+import styled from 'styled-components';
 
 const Section = styled.div`
   padding-top: 2rem;
@@ -16,7 +16,7 @@ const Section = styled.div`
     flex-direction: row;
     padding: 0;
   }
-`
+`;
 const Button = styled.button`
   padding-top: .9375rem;
   margin-bottom: 1rem;
@@ -47,7 +47,7 @@ const Button = styled.button`
       border-color: #ccc;
     }
   }
-`
+`;
 const SecondaryButton = styled.button`
   margin-bottom: 0;
   padding-top: .5rem;
@@ -69,10 +69,10 @@ const SecondaryButton = styled.button`
   @media screen and (min-width: 62rem) {
     display: none;
   }
-`
+`;
 
 export default () =>
-  <Section>
+  (<Section>
     <Button lgHidden type="button">
       Select a size
     </Button>
@@ -81,4 +81,4 @@ export default () =>
     </Button>
     <Button type="button">Find in store</Button>
     <SecondaryButton type="button">Need size help?</SecondaryButton>
-  </Section>
+  </Section>);

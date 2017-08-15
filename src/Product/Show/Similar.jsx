@@ -1,7 +1,7 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from 'react';
+import styled from 'styled-components';
 
-const Section = styled.section`@media screen and (min-width: 48rem) {display: none;}`
+const Section = styled.section`@media screen and (min-width: 48rem) {display: none;}`;
 const Heading = styled.h2`
   margin: 0;
   padding-top: 1rem;
@@ -12,12 +12,12 @@ const Heading = styled.h2`
   border-bottom: solid 1px #171717;
   font-weight: normal;
   text-transform: uppercase;
-`
+`;
 const Wrapper = styled.div`
   padding-top: 1.5rem;
   display: flex;
   flex-direction: column;
-`
+`;
 const Link = styled.a`
   font-family: 'Lora', serif;
   font-size: 14px;
@@ -31,14 +31,14 @@ const Link = styled.a`
   &:hover {
     text-decoration: underline;
   }
-`
+`;
 
 export default () =>
-  <Section>
+  (<Section>
     <Heading>more for you</Heading>
     <Wrapper>
       <Link href="link">Men’s Black Trench Coats</Link>
       <Link href="link">Men’s Short Trench Coats</Link>
       <Link href="link">Men’s Long Trench Coats</Link>
     </Wrapper>
-  </Section>
+  </Section>);

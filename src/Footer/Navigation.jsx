@@ -1,5 +1,5 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from 'react';
+import styled from 'styled-components';
 
 const Section = styled.div`
   padding-bottom: 2rem;
@@ -8,18 +8,18 @@ const Section = styled.div`
   @media screen and (min-width: 48rem) {
     display: block;
   }
-`
+`;
 const Title = styled.h4`
   margin: 0;
   font-size: .75rem;
   line-height: .875rem;
   text-transform: uppercase;
-`
+`;
 const List = styled.nav`
   padding-top: 1rem;
   display: flex;
   flex-direction: column;
-`
+`;
 const Link = styled.a`
   font-size: .75rem;
   font-weight: 600;
@@ -32,10 +32,10 @@ const Link = styled.a`
   &:not(:last-of-type) {
     margin-bottom: .75rem;
   }
-`
+`;
 
 export default () =>
-  <Section>
+  (<Section>
     <div className="row">
       <div className="col-md-3">
         <Title>Customer service</Title>
@@ -71,4 +71,4 @@ export default () =>
         </List>
       </div>
     </div>
-  </Section>
+  </Section>);

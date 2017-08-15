@@ -1,6 +1,7 @@
-import React, { Component } from 'react'
-import styled, { css } from 'styled-components'
-import triangle from './triangle.svg'
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import styled, { css } from 'styled-components';
+import triangle from './triangle.svg';
 
 const Header = styled.button`
   position: relative;
@@ -39,14 +40,14 @@ const Header = styled.button`
       content: normal;
     }
   }
-`
+`;
 const Heading = styled.h2`
   margin: 0;
   font-size: 1rem;
   line-height: 1.1875rem;
   font-weight: normal;
   text-transform: uppercase;
-`
+`;
 const Image = styled.img`
   width: 100%;
   height: auto;
@@ -55,26 +56,26 @@ const Image = styled.img`
   @media screen and (min-width: 48rem) {
     display: block;
   }
-`
+`;
 const Term = styled.div`
   display: flex;
   flex-direction: column;
   &:not(:last-of-type) {
     margin-bottom: 1.5rem;
   }
-`
+`;
 const Title = styled.h3`
   margin: 0;
   margin-bottom: .25rem;
   font-size: .75rem;
   line-height: .875rem;
   font-weight: bold;
-`
+`;
 const Text = styled.p`
   margin: 0;
   font-size: .75rem;
   line-height: 1rem;
-`
+`;
 const Content = styled.div`
   margin-right: -.5rem;
   margin-left: -.5rem;
@@ -95,21 +96,21 @@ const Content = styled.div`
     padding-left: 0;
     display: block;
   }
-`
+`;
 
 class Delivery extends Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
-      isOpened: this.props.isOpened
-    }
-    this.handleClick = this.handleClick.bind(this)
+      isOpened: this.props.isOpened,
+    };
+    this.handleClick = this.handleClick.bind(this);
   }
 
   handleClick() {
     this.setState(prevState => ({
-      isOpened: !prevState.isOpened
-    }))
+      isOpened: !prevState.isOpened,
+    }));
   }
 
   render() {
@@ -157,8 +158,12 @@ class Delivery extends Component {
           </div>
         </div>
       </section>
-    )
+    );
   }
 }
 
-export default Delivery
+Delivery.propTypes = {
+  isOpened: PropTypes.bool.isRequired,
+};
+
+export default Delivery;
